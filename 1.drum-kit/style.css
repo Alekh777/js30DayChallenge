@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: rgb(233, 65, 255);
+}
+
+body, html{
+    height: 100%;
+    background: url(background.jpg);
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.key{
+    background-color: rgba(44, 44, 44, 0.541);
+    border: solid black 3px;
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.1s;
+}
+
+kbd{
+    font-size: 2em;
+}
+
+span{
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.playing{
+    color: var(--primary-color);
+    border: var(--primary-color) solid 5px;
+    transform: scale(1.1);
+}
