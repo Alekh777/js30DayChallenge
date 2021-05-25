@@ -42,7 +42,10 @@ body{
     position: absolute;
     top: 50%;
     transform-origin: 100%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.transition{
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.19, 2.93, 0.58, 1);
-    transform: translateY(-50%) rotate(90deg);
 }
