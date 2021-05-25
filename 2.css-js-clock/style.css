@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root{
+    --gradient: linear-gradient(to right top, #ec84ff, #d28fff, #ba98ff, #a59ffe, #94a4f6, #83aefa, #74b8fb, #6bc0f9, #56d1ff, #49e1ff, #4ff1fd, #68fff5);
+}
+
+
+body, html{
+    height: 100%;
+}
+
+body{
+    background-image: var(--gradient)
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.clock-face{
+    width: 280px;
+    height: 280px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 10px solid white;
+}
