@@ -13,8 +13,8 @@ body{
 
 :root{
     --base: #bb3cf4;
-    --spacing: 10px;
-    --blur: 10px;
+    --spacing: 50px;
+    --blur: 15px;
 }
 
 .controls{
