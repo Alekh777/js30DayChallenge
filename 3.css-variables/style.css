@@ -3,3 +3,36 @@
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
 }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+:root{
+    --base: #bb3cf4;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+.controls{
+    padding: 40px;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+img{
+    width: 90%;
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}
+
+.hl{
+    color: var(--base);
+}
