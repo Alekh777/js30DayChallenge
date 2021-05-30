@@ -51,3 +51,18 @@
       // Sum up the instances of each of these
       const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
   
+
+      // 1
+      let fifteen = inventors.filter(inventor => { //filter loops over the elements in an array and returns an array based on the return received from the callback fn. true or false
+        if(inventor.year > 1500 && inventor.year < 1600) return true //return the filter fn. true i.e.-> keep the element in the newly made array
+      })
+
+      console.table(fifteen);
+
+      // 2
+      let names = inventors.map((inventor => `${inventor.first} ${inventor.last}`)) //same as filter, loops over elements and creates a new array according to the conditions inside callback fn.. We return the array element not true and flase in this case
+
+      console.log(names);
+
+      // 3
+      
