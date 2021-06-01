@@ -56,13 +56,46 @@
       let fifteen = inventors.filter(inventor => { //filter loops over the elements in an array and returns an array based on the return received from the callback fn. true or false
         if(inventor.year > 1500 && inventor.year < 1600) return true //return the filter fn. true i.e.-> keep the element in the newly made array
       })
-
       console.table(fifteen);
 
       // 2
       let names = inventors.map((inventor => `${inventor.first} ${inventor.last}`)) //same as filter, loops over elements and creates a new array according to the conditions inside callback fn.. We return the array element not true and flase in this case
-
       console.log(names);
 
       // 3
-      
+      let ordered = inventors.sort((a, b)=> (a.year > b.year)? 1 : -1)
+      console.table(ordered);
+
+      //4
+      let reduced = inventors.reduce((accumulator, currentValue) => {//The first time the callback is called, accumulator and currentValue can be one of two values. 
+        accumulator + (currentValue.passed - currentValue.year)      //If initialValue is provided in the call to reduce(), then accumulator will be equal to initialValue, 
+      }, 0)//initial value is set to 0.                              //and currentValue will be equal to the first value in the array. If no initialValue is provided, 
+      console.log(reduced);                                          //then accumulator will be equal to the first value in the array, and currentValue will be equal to the second.
+
+      //5
+      let oldest = inventors.sort((a, b) => (a.passed - a.year) > (b.passed - b.year) ? 1 : -1);
+      console.table(oldest)
+
+      //6
+      // site = https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+      // let category = document.querySelector('.mw-category');
+      // let links = Array.from(category.querySelectorAll('a'));
+      // let de = links.map(link => link.textContent).filter(streetName => streetName.includes('de'));
+
+      //7
+      const alpha = people.sort((lastOne, nextOne) => {
+        const [aLast, aFirst] = lastOne.split(', ')
+        const [bLast, bFirst] = nextOne.split(', ')
+        return aLast > bLast ? -1 : 1;
+      });
+      console.log(alpha);
+
+      //8
+      const transportation = data.reduce(function (obj, item){
+        console.log(item);
+        if(!obj[item]) obj[item] = 0;
+        obj[item]++;
+        return obj;
+      }, {})
+
+      console.log(transportation)
