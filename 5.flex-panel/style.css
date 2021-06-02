@@ -61,6 +61,7 @@
 
 .panel p:nth-child(2) {
     font-size: 4em;
+    cursor: default;
 }
 
 .panel *:first-child{transform: translateY(-100%);}
@@ -71,4 +72,8 @@
 .panel.open{
     flex: 5;
     font-size: 40px;
+}
+
+.panel p:nth-child(2):hover{
+    font-weight: 600;
 }
