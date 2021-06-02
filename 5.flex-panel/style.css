@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:  Amatic SC;
+    font-size: 1.7rem;
+    color: white;
+    text-shadow: black 0px 0px 10px;
+}
+
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel1{
+    background: url(./img/flashlight.jpg);
+    /* background-size: cover; */
+}
+.panel2{
+    background: url(./img/photo-1442522772768-9032b6d10e3e.jfif);
+}
+.panel3{
+    background: url(./img/photo-1443891238287-325a8fddd0f7.jfif);
+}
+.panel4{
+    background: url(./img/photo-1465156799763-2c087c332922.jfif);
+}
+.panel5{
+    background: url(./img/photo-1465188162913-8fb5709d6d57.jfif);
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    transition: flex 0.4s ease-in-out;
+    display: flex;
+    text-align: center;
+}
+
+.panel:hover{
+    flex: 2;
+}
+
+p{
+    border: solid red 2px;
+    display: block;
+}
+
+.panel > *{
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel p:nth-child(2) {
+    font-size: 2em;
+}
