@@ -42,6 +42,8 @@
     display: flex;
     text-align: center;
     font-size: 20px;
+    transition: font-size ease-in-out 0.4s,
+                flex ease-in-out 0.4s;
 }
 
 .panel p{
@@ -54,7 +56,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: font-size flex ease-in-out 0.4s;
+    transition: transform 0.4s;
 }
 
 .panel p:nth-child(2) {
