@@ -13,3 +13,31 @@ function findMatches(wordToSearch, cities){
     return place.city.match(regex) || place.country.match(regex);
   })
 }
+
+function displayMatches(){
+  if(this.value == '' || this.value.length == 1) {
+    suggestions.innerHTML = `
+    <li>Filter for a City</li>
+        <li>or Country</li>
+      `;
+    return;
+  }
+    const matchArray = findMatches(this.value, cities);
+  const html = matchArray.map(place => {
+    const regex = new RegExp(this.value, 'gi');
+    const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
+    const countryName = place.country.replace(regex, `<span class="hl">${this.value}</span>`);
+    return `
+    <li>
+      <span class="name">${cityName}, ${countryName}</span>
+      <span class="population">${place.population}</span>
+     </li>`;
+  }).join('');
+  suggestions.innerHTML = html;
+}
+
+const search = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+search.addEventListener('change', displayMatches);
+search.addEventListener('keyup', displayMatches);
