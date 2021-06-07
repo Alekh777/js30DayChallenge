@@ -1,6 +1,8 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 :root{
@@ -21,4 +23,20 @@ body{
     flex-direction: column;
     margin-top:60px;
     width: 60%;
+}
+
+.search{
+    width: 430px;
+    min-height: 90px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    outline: none;
+    border: 10px solid plum;
+    font-size: 2em;
+    transition: border 0.2s ease-in-out;
+}
+
+.search:focus{
+    border: 10px solid purple;
 }
