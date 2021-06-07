@@ -59,6 +59,8 @@ li{
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    text-transform: capitalize;
 }
 
 .suggestions li:nth-child(even) {
@@ -69,4 +71,8 @@ li{
   .suggestions li:nth-child(odd) {
     transform: perspective(100px) rotateX(-3deg) translateY(3px);
     background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+}
+
+.hl{
+    background-color: var(--bg-color);
 }
