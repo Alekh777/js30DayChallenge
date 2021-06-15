@@ -8,3 +8,16 @@ ctx.strokeStyle = "#BADA55";
 ctx.lineJoin = 'round'
 ctx.lineCap = 'round'
 
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+
+function draw(e){
+    if(!isDrawing) return //stop fn. from running if not mouse down
+    
+    console.log(e.clientX, e.clientY);
+}
+
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mousedown', () => {isDrawing = true});
+canvas.addEventListener('mouseup', () => {isDrawing = false});
