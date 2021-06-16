@@ -11,11 +11,52 @@
     <p onclick="makeGreen()">xBREAKxDOWN</p>
 
     <script>
+        const p = document.querySelector('p');
         function makeGreen(){
-            const p = document.querySelector('p');
             p.style.color = "#BADA55";
             p.style.fontSize = "50px";
         }
+
+        //dir
+        console.log(p);
+        console.dir(p);
+        
+        //grouping
+        console.groupCollapsed('one');
+        console.log('hello')
+        console.log('hello')
+        console.log('hello')
+        console.groupEnd('one');
+        console.group('two');
+        console.log('bye')
+        console.log('bye')
+        console.log('bye')
+        console.groupEnd('two');
+
+        //count
+        console.count('A');
+        console.count('A');
+        console.count('B');
+        console.count('A');
+        console.count('A');
+        console.count('B');
+        console.count('B');
+        console.count('A');
+        console.count('B');
+        console.count('B');
+        
+        //timing
+        console.time("Fetching data");
+        fetch('https://api.github.com/users/wesbos')
+        .then(data => data.json())
+        .then(data => {
+            console.timeEnd('Fetching data')
+            console.data;
+        })
+
+        //table
+        const arr = [{name: 'Alekh', age: 21}, {name: 'Tushar', age: 19}];
+        console.table(arr);
     </script>
 </body>
 </html>
