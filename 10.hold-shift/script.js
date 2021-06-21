@@ -29,3 +29,12 @@ checkBoxes.forEach((checkBox, i) => {
         }
     });
 });
+
+function markAll(){
+    let start, end;
+    end = Math.max(index[0], index[1]);
+    start = Math.min(index[0], index[1]);
+    console.log(start, end);
+    for(let i = start; i <= end; i++)
+        checkBoxes[i].setAttribute('checked', 'true');
+}
